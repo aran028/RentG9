@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilosRentG9.css">
+        <link rel="icon" href="img/LogoRentG.png" type="image/png" sizes="25x25">
+        <title>Formularios</title>
+        <script>
+            function iniciar() {
+                var boton = document.getElementById("enviar");
+                boton.addEventListener("click", enviarformulario);
+            }
+            function enviarformulario() {
+                var lista = document.forms;
+                var formulario = lista[0];
+                formulario.submit();
+            }
+            window.addEventListener("load", iniciar);
+        </script>
+    </head>
+    <body>
+        <section>
+            <form name="informacion" method="get" action="procesar.php">
+                <p><label>Correo: <input type="email" name="correo" id="correo" required></label></p>
+                <p><button type="button" id="enviar">Registrarse</button></p>
+            </form>
+        </section>
+    </body>
+</html>
